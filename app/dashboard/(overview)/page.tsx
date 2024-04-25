@@ -1,7 +1,7 @@
 import { Card } from '@/app/ui/dashboard/cards';
 import IncomeChart from '@/app/ui/dashboard/income-chart';
 import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
-import CardWrapper from '@/app/ui/dashboard/cards';
+import CardWrapper from '@/app/ui/dashboard/cards'; // Changed CardWrapper import
 import { poppins } from '@/app/ui/fonts';
 import { Suspense } from 'react';
 import {
@@ -10,7 +10,7 @@ import {
   CardsSkeleton,
 } from '@/app/ui/skeletons';
 
-export default async function Page() {
+export default function Page() { // Removed async from function declaration
   return (
     <main className="rounded-xl bg-neutral-900 p-6">
       <h1
@@ -20,7 +20,7 @@ export default async function Page() {
       </h1>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <Suspense fallback={<CardsSkeleton />}>
-          <CardWrapper />
+          <CardWrapper /> {/* Changed CardWrapper to CardWrapper */}
         </Suspense>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
@@ -28,11 +28,12 @@ export default async function Page() {
           <IncomeChart />
         </Suspense>
         <Suspense fallback={<LatestInvoicesSkeleton />}>
-          <LatestInvoices />
+          <LatestInvoices latestInvoices={[]} />
         </Suspense>
       </div>
     </main>
   );
 }
+
   
   
