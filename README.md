@@ -10,5 +10,5 @@
 <li><h4>Account Management Page: Allows you to perform all CRUD operations (create, read, update, delete) on accounts, providing seamless management of financial records.</h4></li>
 </ul>
 
-<h2>Designed tocomplement any project, this out-of-the-box platform utilises the powerful React framework + Next.js 14 add-on for optimal performance and scalability.</h2>
+<h2>Designed tocomplement any project, this out-of-the-box platform utilises the powerful <b><a href="https://ru.legacy.reactjs.org/">React framework</a> + <a href="https://nextjs.org/blog/next-14">Next.js 14</a></b> add-on for optimal performance and scalability.</h2>
 
